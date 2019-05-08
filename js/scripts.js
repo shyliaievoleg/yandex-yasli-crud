@@ -52,7 +52,7 @@
   // Get game list request
   function getGamesRequest() {
     var xhr = new XMLHttpRequest();
-    var url = 'api/database.json';
+    var url = 'https://shyliaievoleg.github.io/yandex-yasli-crud/api/database.json';
 
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
