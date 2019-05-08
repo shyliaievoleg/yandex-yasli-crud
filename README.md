@@ -59,7 +59,4 @@
 
 
 
-Посмотреть задание можно по [ссылке](https://shyliaievoleg.github.io/yandex-yasli-crud/).
-
-
 
