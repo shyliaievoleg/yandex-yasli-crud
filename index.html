@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD интерфейс</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+  
+  <div class="container">
+    <h1>CRUD-интерфейс для редактирования базы данных игр</h1>
+    <div class="btns-holder">
+      <button class="btn add-game">Добавить игру</button>
+    </div>
+    
+   
+    <div class="games"></div>
+
+  </div>
+
+  <div class="form-holder add popup hidden">
+    <div class="form-holder-content">
+      <h2>Добавить игру</h2>
+      <form name="add-game" method="POST">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="price" placeholder="Price">
+        <input type="text" name="platform" placeholder="Platform">
+        <textarea name="message"></textarea>
+        <div class="actions">
+          <button type="submit" class="btn ok">Добавить</button>
+          <button class="btn cancel">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="form-holder edit popup hidden">
+    <div class="form-holder-content">
+      <h2>Изменить игру</h2>
+      <form name="edit-game" method="POST">
+        <h1 class="edit-id">id</h1>
+        <input type="text" name="edit-title" placeholder="Title">
+        <input type="text" name="edit-price" placeholder="Price">
+        <input type="text" name="edit-platform" placeholder="Platform">
+        <textarea name="message"></textarea>
+        <div class="actions">
+          <button type="submit" class="btn ok">Изменить</button>
+          <button class="btn cancel">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="form-holder vote popup hidden">
+    <div class="form-holder-content">
+      <h1 class="vote-id">id</h1>
+      <h2>Оценить игру</h2>
+      <h3 class="game-title"></h3>
+      <form name="vote-game" method="POST">
+        <div class="radio-holder">
+          <div class="radio">
+            <input type="radio" name="r1" value="1" id="id-raiting-1">
+            <label for="id-raiting-1">1</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="2" id="id-raiting-2">
+            <label for="id-raiting-2">2</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="3" id="id-raiting-3">
+            <label for="id-raiting-3">3</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="4" id="id-raiting-4">
+            <label for="id-raiting-4">4</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="5" id="id-raiting-5" checked>
+            <label for="id-raiting-5">5</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="6" id="id-raiting-6">
+            <label for="id-raiting-6">6</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="7" id="id-raiting-7">
+            <label for="id-raiting-7">7</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="8" id="id-raiting-8">
+            <label for="id-raiting-8">8</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="9" id="id-raiting-9">
+            <label for="id-raiting-9">9</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="r1" value="10" id="id-raiting-10">
+            <label for="id-raiting-10">10</label>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn ok">Оценить</button>
+          <button class="btn cancel">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="form-status popup hidden">
+    <div class="form-status-content">
+      <h2></h2>
+    </div>
+  </div>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
