@@ -242,12 +242,24 @@
 
     function onDeleteBtnClick() {
       var gameId = this.closest('.game').firstElementChild.innerText;
-      deleteGameRequest(gameId);
+      confirmDeleteGame(gameId);
     }
 
     for (var i = 0; i < deleteBtns.length; i++) {
       deleteBtns[i].onclick = onDeleteBtnClick;
     }
+  }
+
+  // Confirm Delete Game
+  function confirmDeleteGame(gameId) {
+    document.querySelector('.confirm-delete').classList.remove('hidden');
+    document.querySelector('.confirm-delete .ok').onclick = function() {
+      deleteGameRequest(gameId);
+      hidePopup();
+    };
+    document.querySelector('.confirm-delete .cancel').onclick = function() {
+      hidePopup();
+    };
   }
   
 
